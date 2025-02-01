@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "snowtweet/manage.py",
+      "src": "snowtweet/wsgi_handler.py",
       "use": "@vercel/python"
     },
     {
