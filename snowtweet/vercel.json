@@ -2,12 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "snowtweet/snowtweet/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      }
+      "src": "snowtweet/manage.py",
+      "use": "@vercel/python"
     },
     {
       "src": "build_files.sh",
@@ -24,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "snowtweet/snowtweet/wsgi.py"
+      "dest": "snowtweet/wsgi_handler.py"
     }
   ]
 }
