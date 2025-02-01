@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="icon" type="image/png" href="{% static 'images/penguin.png' %}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Corrected Font Link for Typewriter Style Font (Courier Prime) -->
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-[Courier+Prime] flex items-center justify-center min-h-screen px-4">
+
+  <!-- Login Form -->
+  <form action="#" method="POST" class="w-full max-w-md space-y-6">
+
+    <!-- Logo/Image at the top center -->
+    <div class="flex justify-center"> <!-- Removed mb-2 -->
+      <img src="{% static 'images/penguin.png' %}" alt="Logo" class="w-1/4 max-w-xs h-auto object-contain">
+    </div>
+
+    <!-- Heading Below Image -->
+    <h2 class="text-center text-4xl font-semibold text-orange-400 mt-0 mb-2">snowtweet</h2>
+
+    <!-- Username Field -->
+    <div>
+      <label for="username" class="block text-gray-700 text-sm font-semibold mb-2">Username</label>
+      <input type="text" id="username" name="username" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800" required>
+    </div>
+    
+    <!-- Password Field -->
+    <div>
+      <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+      <input type="password" id="password" name="password" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800" required>
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="w-full bg-orange-400 text-white py-3 rounded-2xl hover:bg-orange-500 focus:ring-2 focus:ring-orange-300 transition">Login</button>
+
+    <!-- Register Prompt -->
+    <div class="mt-4 text-center">
+      <p class="text-sm text-gray-600">Don't have an account? <a href="/tweet/register" class="text-orange-400 hover:underline">Register</a></p>
+    </div>
+
+  </form>
+
+</body>
+</html>

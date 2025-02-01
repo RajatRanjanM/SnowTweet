@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="{% static 'images/penguin.png' %}">
+  <title>
+    {% block title %}
+      snowtweet
+    {% endblock %}
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Courier+Prime] bg-gray-50 min-h-screen">
+    <div>
+        {% block content %}
+        {% endblock %}
+        {% block write %}
+        {% endblock %}
+        {% block tweet %}
+        {% endblock %}
+    </div>
+    
+</body>
+</html> 
